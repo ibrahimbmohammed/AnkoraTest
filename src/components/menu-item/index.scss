@@ -1,0 +1,49 @@
+
+// .nms-menu-link {
+//   padding: 1.125rem 2.125rem;
+//   display: flex;
+//   align-items: center;
+//   font-size: 1rem;
+//   font-weight: 600;
+//   border-left: 0 solid $activeNavBg;
+//   @include transition-ease;
+
+//   .nms-menu-icon {
+//     margin-right: 1rem;
+//     @include transition-ease;
+//   }
+
+//   &.dashboard {
+//     border-left: 8px solid transparent;
+//   }
+
+//   &.active {
+//     background: rgba($activeNavBg, 0.08);
+//     color: $actionNavLinkColor;
+//   }
+
+//   &:hover {
+//     text-decoration: none;
+//     background: rgba($activeNavBg, 0.4);
+//     color: $whiteColor;
+//     border-width: 8px;
+//     border-color: $activeNavBg;
+
+//     .nms-menu-icon {
+//       path {
+//         fill: $whiteColor;
+//       }
+//     }
+//   }
+// }
+
+// // media queries
+// @media (max-width: 767px) {
+//   .nms-menu-link {
+//     font-size: 0.8rem;
+//   }
+
+//   .nms-link-title {
+//     display: none;
+//   }
+// }
