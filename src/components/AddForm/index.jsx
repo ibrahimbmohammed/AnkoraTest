@@ -13,9 +13,9 @@ const Form = ({
     handleEndChange
  }) => {
 
-    const CustomInput = ({ value }) => (
-        <input {...register('start')} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-md py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="90210" />
-    );
+    // const CustomInput = ({ value }) => (
+    //     <input {...register('start')} className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-md py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="90210" />
+    // );
 
     return (
         <form className="w-full max-w-lg" onSubmit={handleSubmit(submitData)}>
@@ -27,7 +27,7 @@ const Form = ({
                     </label>
                     <div className="relative">
 
-                        <select {...register('title')} id="type" className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded-md leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                        <select {...register('title')} id="type" className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded-md leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
                             <option value="Office Visit">Office Visit</option>
                             <option value="Online">Online</option>
                             <option value="Drive By">Drive By</option>

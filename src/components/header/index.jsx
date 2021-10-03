@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+//import { Link } from "react-router-dom";
 
 function Header({ children, openMenu }) {
-  const toggleSidebar = () => openMenu();
+  //const toggleSidebar = () => openMenu();
 
   return (
     <>
