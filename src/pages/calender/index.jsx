@@ -3,7 +3,7 @@ import format from "date-fns/format";
 import getDay from "date-fns/getDay";
 import parse from "date-fns/parse";
 import startOfWeek from "date-fns/startOfWeek";
-import { useForm, useFieldArray } from "react-hook-form";
+import { useForm} from "react-hook-form";
 import { Calendar, dateFnsLocalizer } from "react-big-calendar";
 import "react-big-calendar/lib/css/react-big-calendar.css";
 import Modal from "../../components/modal"
@@ -45,11 +45,11 @@ const events = [
 // dob: new Date(newPatient.dob).toISOString(),
 
 const Calender = () => {
-    const [newEvent, setNewEvent] = useState({ title: "",desc:"", start: "", end: "" });
+    //const [newEvent, setNewEvent] = useState({ title: "",desc:"", start: "", end: "" });
     const [allEvents, setAllEvents] = useState(events);
     const [openEvent, setOpenEvent] = useState(false);
     const [openSlot, setOpenSlot] = useState(false);
-    const [addModal, setAddModal] = useState(false);
+    //const [addModal, setAddModal] = useState(false);
     const [openSlotTrue, setOpenSlotTrue] = useState({title: "", desc: "", start: "", end: ""});
     const [eventSelect, setEventSelect] = useState({clickedEvent: "", start: "", end: "", title: "", desc: ""});
 
@@ -58,20 +58,19 @@ const Calender = () => {
     const [endDate, setEndDate] = useState(new Date());
     const handleEndChange = endDate => setEndDate(endDate);
 
-    const { formState: { errors }, register, handleSubmit, watch, control, getValues, setValue, reset } = useForm({
+    const { formState: register, handleSubmit, setValue, reset } = useForm({
         defaultValues: openSlotTrue || {},
       });
     const handleAddEvent = (newEvent) => {
         setAllEvents([...allEvents, newEvent]);
-        setAddModal(false)
     }
     
     //closes modals
-    const handleClose = () => {
-        setOpenEvent(false)
-        setOpenSlot(false)
-        setAddModal(false)
-    }
+    // const handleClose = () => {
+    //     setOpenEvent(false)
+    //     setOpenSlot(false)
+    //     setAddModal(false)
+    // }
 
     //  Allows user to click on calendar slot and handles if appointment exists
      const handleSlotSelected = (slotInfo) => {
@@ -114,14 +113,14 @@ const Calender = () => {
     //   };
 
       // Onclick callback function that pushes new appointment into events array.
-      const setNewAppointment = () => {
-        const { start, end, title, desc } = this.state;
-        let appointment = { title, start, end, desc };
-        let events = this.state.events.slice();
-        events.push(appointment);
-        this.setState({ events });
-        setAllEvents(events)
-      }
+    //   const setNewAppointment = () => {
+    //     const { start, end, title, desc } = this.state;
+    //     let appointment = { title, start, end, desc };
+    //     let events = this.state.events.slice();
+    //     events.push(appointment);
+    //     this.setState({ events });
+    //     setAllEvents(events)
+    //   }
       const submitData = (values) => {
         console.log("whats uuuuuppppp", values)
         handleAddEvent(values)   
