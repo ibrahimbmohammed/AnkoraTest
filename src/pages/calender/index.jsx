@@ -58,7 +58,7 @@ const Calender = () => {
     const [endDate, setEndDate] = useState(new Date());
     const handleEndChange = endDate => setEndDate(endDate);
 
-    const { formState: register, handleSubmit, setValue, reset } = useForm({
+    const { formState: { errors }, register, handleSubmit, watch, control, getValues, setValue, reset } = useForm({
         defaultValues: openSlotTrue || {},
       });
     const handleAddEvent = (newEvent) => {
