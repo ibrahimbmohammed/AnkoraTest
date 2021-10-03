@@ -15,7 +15,7 @@ export const navItems = [
         name: 'dashboard'
     },
     {
-        title: "Add a New Patient ",
+        title: "Add New Patient ",
         icon: <AddIcon className="nms-menu-icon" />,
         path: "/patients",
         name: 'patient'
